@@ -20,6 +20,7 @@ argon_check_pkg() {
 
 pkglist=(python3-setuptools python3-pip python3-devel gcc libffi libffi-devel i2c-tools raspberrypi-userland)
 for curpkg in ${pkglist[@]}; do
+  echo "********************************************************************"
   echo "The installation package begins: $curpkg "
 	sudo dnf install -y $curpkg
 	RESULT=$(argon_check_pkg "$curpkg")
@@ -31,14 +32,18 @@ for curpkg in ${pkglist[@]}; do
 		exit
 	else
 	  echo "The installation package $curpkg Completed"
+	  echo "********************************************************************"
 	fi
 
 done
-
+echo "********************************************************************"
+echo "Install wheel rpi.gpio smbus2 using pip3"
+echo "If it times out, try again"
+echo "********************************************************************"
 sudo pip3 install wheel
 sudo pip3 install rpi.gpio
 sudo pip3 install smbus2
-
+echo "********************************************************************"
 daemonname="argononed"
 powerbuttonscript=/usr/bin/$daemonname.py
 shutdownscript="/lib/systemd/system-shutdown/"$daemonname"-poweroff.py"
