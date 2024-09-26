@@ -25,8 +25,8 @@
 `curl https://raw.githubusercontent.com/chaoyuejc/argon1-all/refs/heads/master/argon1_openeuler.sh | bash`
 
 ## 异常问题
-1. 问题： 在执行 argon1_openeuler.sh 脚本时，使用pip3安装wheel时容易出现‘Read timed out.’的错误。
-   解决方法： 请重试几次，或者使用其他网络环境。
+1. 问题： 在执行脚本时，使用pip3安装wheel的过程容易出现‘Read timed out.’的错误。
+   解决方法： 命令行下先执行  pip install wheel  如果一次安装失败，可以多次尝试，因为是国外的网，速度比较慢，容易安装失败，安装成功后再重新执行脚本。
 
 
 
