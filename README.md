@@ -8,3 +8,25 @@
 |argon1_centos.sh| [GitHub上tomjo/argonone-centos仓库](https://github.com/tomjo/argonone-centos) | CentOS 7 Kernel 5.4.56-v7l.1.el7 | Raspberry Pi 4 Model B | GitHub上tomjo/argonone-centos分享的脚本，仅搬运         |
 |argon1_openeuler.sh| 无                                                                          | openEuler 24.03 (LTS)            | Raspberry Pi 4 Model B | 基于 GitHub上tomjo/argonone-centos分享的脚本改造而来 |
 
+
+## 使用方法
+`curl https://raw.githubusercontent.com/chaoyuejc/argon1-all/refs/heads/master/<对应脚本名> | bash`
+
+### 例如:
+
+#### 用于 Raspberry Pi OS 系统的脚本命令为：
+`curl https://raw.githubusercontent.com/chaoyuejc/argon1-all/refs/heads/master/argon1.sh | bash`
+
+#### 用于 CentOS 系统的脚本命令为：
+`curl https://raw.githubusercontent.com/chaoyuejc/argon1-all/refs/heads/master/argon1_centos.sh | bash`
+
+
+#### 用于 openEuler 系统的脚本命令为：
+`curl https://raw.githubusercontent.com/chaoyuejc/argon1-all/refs/heads/master/argon1_openeuler.sh | bash`
+
+## 异常问题
+1. 问题： 在执行 argon1_openeuler.sh 脚本时，安装wheel-0.44.0 时容易出现‘Read timed out.’的错误。
+   解决方法： 请重新多试几次，或者使用其他网络环境。
+
+
+

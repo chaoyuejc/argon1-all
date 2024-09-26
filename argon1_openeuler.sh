@@ -29,7 +29,10 @@ for curpkg in ${pkglist[@]}; do
 		echo "Package failed to install: $curpkg"
 		echo "********************************************************************"
 		exit
+	else
+	  echo "The installation package $curpkg Completed"
 	fi
+
 done
 
 sudo pip3 install wheel
