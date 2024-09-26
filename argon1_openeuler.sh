@@ -33,9 +33,11 @@ for curpkg in ${pkglist[@]}; do
 	else
 	  echo "The installation package $curpkg Completed"
 	  echo "********************************************************************"
+	  echo ""
 	fi
 
 done
+echo ""
 echo "********************************************************************"
 echo "Install wheel rpi.gpio smbus2 using pip3"
 echo "If it times out, try again"
